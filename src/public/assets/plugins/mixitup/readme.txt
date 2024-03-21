@@ -1,2 +1,2 @@
-Version: 1.5.4 Licensed plugin 
+giVersion: 1.5.4 Licensed plugin 
 Do not update this plugin!

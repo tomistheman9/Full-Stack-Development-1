@@ -20,7 +20,7 @@ const regionAverage = (req,res) => {
 
   res.send({
     region,
-    average_rating:avgRating.toFixed(2),
+    average_rating:avgRating.toFixed(1),//change back to 2, this is for github only
     average_fee:avgFee.toFixed(2)
   });
 };

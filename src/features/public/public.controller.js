@@ -1,23 +1,52 @@
 const Data = require("../../shared/resources/data");
 
 //I changed below
-const contactUs = (req, res) => {
-  const fullname = req.body.fullname;
-  const email = req.body.email;
-  const phone = req.body.phone;
-  const company_name = req.body.company_name;
-  const project_name = req.body.project_name;
-  const project_desc = req.body.project_desc;
-  const department = req.body.department;
-  const message = req.body.message;
-  const file = req.body.null;
+const ContactModel = require('../../shared/db/mongodb/schemas/public.Schema'); // Assuming you have a Mongoose model defined
 
-  const responseMessage = `Message received from ${fullname}`;
-  //I changed above
+const contactUs = async (req, res) => {
+  const {
+    fullname,
+    email,
+    phone,
+    company_name,
+    project_name,
+    project_desc,
+    department,
+    message
+  } = req.body;
 
-  console.log(responseMessage);
-  res.send(responseMessage);
+  // Basic validation
+  if (!fullname || !email || !message) {
+    return res.status(400).send('Fullname, email, and message are required.');
+  }
+
+  // Additional validation if necessary (e.g., email format)
+
+  try {
+    // Create a new contact document
+    const newContact = new ContactModel({
+      fullname,
+      email,
+      phone,
+      company_name,
+      project_name,
+      project_desc,
+      department,
+      message
+    });
+
+    // Save the document to the database
+    await newContact.save();
+
+    const responseMessage = `Message received from ${fullname}`;
+    console.log(responseMessage);
+    res.send(responseMessage);
+  } catch (error) {
+    console.error('Error saving contact:', error);
+    res.status(500).send('Error saving contact.');
+  }
 };
+
 
 const calculateResidentialQuote = (req, res) => {
   // define constants

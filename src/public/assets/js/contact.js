@@ -14,12 +14,16 @@ const formEl = document.getElementById("contact-form");
 
 formEl.addEventListener("submit", (event) => {
 	event.preventDefault(); //stop the page reloading
+	// Code below grabs the information from the form
+	const formData = new FormData(formEl);
+	// const obj = {};
+	// formData.forEach((value, key) => {
+	// 	obj[key] = value;
+	// });
 
-// Code below grabs the information from the form
-const formData = new FormData(formEl);
 const obj = Object.fromEntries(formData);
 
-console.log(JSON.stringify(obj));
+console.log(obj);
 // The below sends the info to the URL that we were given
 fetch("http://localhost:3015/contact", {
 	method: "POST",

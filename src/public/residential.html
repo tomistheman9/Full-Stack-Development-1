@@ -306,6 +306,104 @@
 			</section>
 			<!-- /LAYER SLIDER -->
 
+		<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sortable Table</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div>
+  <label for="sort">Sort By:</label>
+  <select id="sort">
+    <option value="name">Name</option>
+    <option value="rating">Rating</option>
+    <option value="fee">Fee</option>
+  </select>
+</div>
+
+<table id="dataTable">
+  <thead>
+    <tr>
+      <th>Full Name</th>
+      <th>Email</th>
+      <th>Region</th>
+      <th>Rating</th>
+      <th>Fee</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Table data will be populated dynamically -->
+  </tbody>
+</table>
+
+<script src="tableforagents.js"></script>
+
+</body>
+</html>
+
+
+
+<!--WORKING TABLE BELOW BUT NOT SEPERATED>
+<! <script>
+  // Dummy data (replace with MongoDB data retrieval)
+  var data = [
+    { name: "John Doe", email: "john@example.com", region: "North", rating: 100, fee: 200 },
+    { name: "Jane Smith", email: "jane@example.com", region: "South", rating: 95, fee: 150 },
+    { name: "Bob Johnson", email: "bob@example.com", region: "West", rating: 85, fee: 180 },
+    // Add more data as needed
+  ];
+
+  // Function to populate the table
+  function populateTable(data) {
+    var tbody = document.querySelector("#dataTable tbody");
+    tbody.innerHTML = "";
+    data.forEach(function(row) {
+      var tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${row.name}</td>
+        <td>${row.email}</td>
+        <td>${row.region}</td>
+        <td class="${getClassForRating(row.rating)}">${row.rating}</td>
+        <td>${row.fee}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  // Function to get class for rating
+  function getClassForRating(rating) {
+    if (rating >= 100) return "green";
+    else if (rating >= 90) return "blue";
+    else return "purple";
+  }
+
+  // Function to sort data by selected option
+  function sortData(option) {
+    data.sort(function(a, b) {
+      if (option === "name") return a.name.localeCompare(b.name);
+      else if (option === "rating") return b.rating - a.rating;
+      else return a.fee - b.fee;
+    });
+    populateTable(data);
+  }
+
+  // Initial population of the table
+  populateTable(data);
+
+  // Event listener for sorting
+  document.querySelector("#sort").addEventListener("change", function() {
+    sortData(this.value);
+  });
+</script>
+
+</body>
+</html> -->
+
+
 
 			<!-- BUSINESS MODEL -->
 			<section id="business-model">

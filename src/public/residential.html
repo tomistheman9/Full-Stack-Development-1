@@ -6,6 +6,16 @@
 		<title>Rocket Elevators</title>
 		<meta name="description" content="" />
 		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+		<!--I put this link down below for the header styling-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!--I put this link above for the header styling-->
+		<!--I put in this link down below for the p styling-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!--I put in this link up above for the p styling-->
 
 		<!-- mobile settings -->
 		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
@@ -27,9 +37,6 @@
 		<!-- PAGE LEVEL SCRIPTS -->
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/color_scheme/red.css" rel="stylesheet" type="text/css" id="color_scheme" />
-
-		<link rel="stylesheet" href="./assets/css/residential.css">
-    	<script src="./assets/js/residential.js" defer></script>
 	</head>
 
 	<body class="smoothscroll enable-animation">
@@ -114,7 +121,7 @@
 			<section class="page-header page-header-xs parallax parallax-3" style="background-image:url('assets/images/rocketElevators/imgpattern2.jpg')">
 				<div class="overlay dark-2"></div>
 				<div class="container">
-					<h1><strong>RESIDENTIAL SERVICES</strong></h1>
+					<h1 style="color: #0a65a0;"<strong>RESIDENTIAL SERVICES</strong></h1>
 					<!-- breadcrumbs -->
 					<ol class="breadcrumb">
 						<li><a id="rockets-home" href="index.html">Home</a></li>
@@ -172,7 +179,7 @@
 								offsetxout:0;
 								scalexout:0;
 								scaleyout:0;" 
-								style="top:100px;left:50%;font-weight: bold; opacity: 1;font-size: 150px;color:#fff; text-shadow:rgb(0 0 0 / 30%) 3px 3px 5px; white-space: nowrap;">
+								style="top:100px;left:50%;font-weight: bold; opacity: 1;font-size: 150px;color:#0a65a0; text-shadow:rgb(0 0 0 / 30%) 3px 3px 5px; white-space: nowrap;">
 								100
 							</p>
 							<p class="ls-l" data-ls="
@@ -306,114 +313,24 @@
 			</section>
 			<!-- /LAYER SLIDER -->
 
-		<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sortable Table</title>
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-<div>
-  <label for="sort">Sort By:</label>
-  <select id="sort">
-    <option value="name">Name</option>
-    <option value="rating">Rating</option>
-    <option value="fee">Fee</option>
-  </select>
-</div>
-
-<table id="dataTable">
-  <thead>
-    <tr>
-      <th>Full Name</th>
-      <th>Email</th>
-      <th>Region</th>
-      <th>Rating</th>
-      <th>Fee</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- Table data will be populated dynamically -->
-  </tbody>
-</table>
-
-<script src="tableforagents.js"></script>
-
-</body>
-</html>
-
-
-
-<!--WORKING TABLE BELOW BUT NOT SEPERATED>
-<! <script>
-  // Dummy data (replace with MongoDB data retrieval)
-  var data = [
-    { name: "John Doe", email: "john@example.com", region: "North", rating: 100, fee: 200 },
-    { name: "Jane Smith", email: "jane@example.com", region: "South", rating: 95, fee: 150 },
-    { name: "Bob Johnson", email: "bob@example.com", region: "West", rating: 85, fee: 180 },
-    // Add more data as needed
-  ];
-
-  // Function to populate the table
-  function populateTable(data) {
-    var tbody = document.querySelector("#dataTable tbody");
-    tbody.innerHTML = "";
-    data.forEach(function(row) {
-      var tr = document.createElement("tr");
-      tr.innerHTML = `
-        <td>${row.name}</td>
-        <td>${row.email}</td>
-        <td>${row.region}</td>
-        <td class="${getClassForRating(row.rating)}">${row.rating}</td>
-        <td>${row.fee}</td>
-      `;
-      tbody.appendChild(tr);
-    });
-  }
-
-  // Function to get class for rating
-  function getClassForRating(rating) {
-    if (rating >= 100) return "green";
-    else if (rating >= 90) return "blue";
-    else return "purple";
-  }
-
-  // Function to sort data by selected option
-  function sortData(option) {
-    data.sort(function(a, b) {
-      if (option === "name") return a.name.localeCompare(b.name);
-      else if (option === "rating") return b.rating - a.rating;
-      else return a.fee - b.fee;
-    });
-    populateTable(data);
-  }
-
-  // Initial population of the table
-  populateTable(data);
-
-  // Event listener for sorting
-  document.querySelector("#sort").addEventListener("change", function() {
-    sortData(this.value);
-  });
-</script>
-
-</body>
-</html> -->
-
-
 
 			<!-- BUSINESS MODEL -->
 			<section id="business-model">
 
 				<div class="container">
-					<h2 class="m-0">What we deliver since <span style="color: rgb(170, 69, 69)">1976</span>...</h2>
+					<h2 class="m-0" style="color: #0a65a0;"">What we deliver since<span
+                  class="bold-year"
+                  style="
+                    color: red;
+                    font-size: 1.1em;
+                    background-color: #0a65a0;
+                  "
+                  >1976...</span></strong>
+              </h2>
 					<p>
 						... and why we are
 						<span class="word-rotator" data-delay="2000">
-							<span class="items" style="color: rgb(170, 69, 69); text-align: center">
+							<span class="items" style="text-align: center">
 								<span>trusted</span>
 								<span>loved</span>
 							</span>
@@ -425,28 +342,28 @@
 						<div class="col-md-3 col-6">
 							<div class="text-center">
 								<i class="ico-light ico-lg ico-rounded ico-hover et-tools-2"></i>
-								<h4>24/7 Customer Support</h4>
+								<h4 style="color: #0a65a0;">24/7 Customer Support</h4>
 								<p>We are one phone call away. We are always ready to answer any questions, provide maintainance, repair services, and many more! </p>
 							</div>
 						</div>
 						<div class="col-md-3 col-6">
 							<div class="text-center">
 								<i class="ico-light ico-lg ico-rounded ico-hover et-lightbulb"></i>
-								<h4>Innovative Design</h4>
+								<h4 style="color: #0a65a0;">Innovative Design</h4>
 								<p>Our team is consisted of top-tier designers and architects ready to provide creative, innovative, and unique solutions.</p>
 							</div>
 						</div>
 						<div class="col-md-3 col-6">
 							<div class="text-center">
 								<i class="ico-light ico-lg ico-rounded ico-hover et-puzzle"></i>
-								<h4>Custom Features</h4>
+								<h4 style="color: #0a65a0;">Custom Features</h4>
 								<p>Every building deserves a special touch. We work closely with our clients to deliver what is best for them.</p>
 							</div>
 						</div>
 						<div class="col-md-3 col-6">
 							<div class="text-center">
 								<i class="ico-light ico-lg ico-rounded ico-hover et-shield"></i>
-								<h4>Enhanced Safety</h4>
+								<h4 style="color: #0a65a0;">Enhanced Safety</h4>
 								<p>Your safety is our priority, and we take it to the next level. Our highly-experienced engineers have developed state-of-the-art safety features to our elevators.</p>
 							</div>
 						</div>
@@ -463,7 +380,7 @@
 				<div class="overlay dark-7"></div>
 				<div class="container text-center">
 					<div class="text-center">
-						<h3>Contact us now & get <span class="countTo" data-speed="1000" style="color: #fff">15</span>% discount</br> of your first purchase!</h3>
+						<h3 style="color: #0a65a0;">Contact us now & get <span class="countTo" data-speed="1000" style="color: #0a65a0;">15</span>% discount</br> of your first purchase!</h3>
 						<p class="font-lato fs-20">
 							* Offer valid until the Febuary 20th, 2022.
 						</p>
@@ -473,11 +390,50 @@
 			</section>
 			<!-- /PARALLAX -->
 
+			<!-- TOP AGENTS STUFF THAT I CHANGED DOWN BELOW -->
+			<section class="container text-center" id="business-model">
+				<h2 class="m-0" style="color: #0a65a0;">Here Are Our Top Rated Agents!</h2>
+					<p>
+						... and they are
+						<span class="word-rotator" data-delay="2000">
+							<span class="items" style="text-align: center">
+								<span>trusted</span>
+								<span>loved</span>
+							</span>
+						</span>
+						by our clients.
+					</p>
+			</section>
+			<section>
+			<div class="container">
+			<table id="data-table" class="table table-bordered table-sortable">
+    <thead>
+      <tr>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Region</th>
+        <th>Rating</th>
+        <th>Fee</th>
+        <th id="sort-dropdown"></th> <!-- This is where the dropdown will be added -->
+      </tr>
+    </thead>
+    <tbody id="table-body">
+      <!-- Table data will be dynamically added here -->
+    </tbody>
+  </table>
+
+  <script src="./assets/js/usedfortable.js"></script>
+
+			</div>
+				
+			</section>
+			<!-- /TOP AGENTS STUFF THAT I CHANGED ABOVE -->
+
 			<!-- TESTIMONIAL -->
 			<section id="rt-testimonial">
 				<div class="container" >
 					<div class="row">
-						<h2 class="m-0" style="padding-bottom: 1%;"><span style="color:rgb(170, 69, 69)">Still not convinced?</span> Hear what our clients have to say:</h2>
+						<h2 class="m-0" style="padding-bottom: 1%;"><span style="color: #0a65a0;">Still not convinced?</span> Hear what our clients have to say:</h2>
 						<section class="alternate" style="border-bottom-color:rgb(255,255,255)">
 							<div class="container">
 								<div class="row" style="text-align: center;">
@@ -540,7 +496,6 @@
 			</section>
 			<!-- /TESTIMONIAL -->
 
-
 			<!-- MODAL -->
 			<div class="modal fade" id="subscribe-message" role="dialog">
 				<div class="modal-dialog">				
@@ -567,46 +522,54 @@
 
 
 			<!-- FOOTER -->
-			<footer id="footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8">
-							<h3 class="letter-spacing-1">WHY US?</h3>
-							<p>
-								We have the conviction that we create the most innovative and reliable products on the market. Contact us today for any questions you might have.
-							</p>
-							<h2>(418) 555-1234</h2>
-						</div>
+			<footer style="background-color: #0a65a0;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <h3 class="letter-spacing-1" style="color: #fff;;">WHY US?</h3>
+              <p style="color: #fff;">
+                We have the conviction that we create the most innovative and
+                reliable products on the market. Contact us today for any
+                questions you might have.
+              </p>
+              <h2 style="color: #fff;">(418) 555-1234</h2>
+            </div>
 
-						<div class="col-md-4">
-							<h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
-							<p>Subscribe to Our Newsletter to get Important News & Offers</p>
-							
-							<form id="subscribe-form" onsubmit="showPopup()">
-								<div class="input-group">
-									<span class="input-group-addon">
-										<i class="fa fa-envelope"></i>
-									</span>
-									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
-									<span class="input-group-btn">
-										<button class="btn btn-primary" type="submit">
-											Subscribe
-										</button>
-									</span>
-								</div>
-							</form>
+            <div class="col-md-4">
+              <h3 class="letter-spacing-1" style="color: #fff;">KEEP IN TOUCH</h3>
+              <p style="color: #fff;">Subscribe to Our Newsletter to get Important News & Offers</p>
 
-						</div>
-					</div>
-				</div>
-				<div class="copyright">
-					<div class="container">
-						&copy; All Rights Reserved, Rocket Elevators <br>
-						Disclaimer: This website was developed for educational purpose only. 
-						The content presented herein is fictional. 
-					</div>
-				</div>
-			</footer>
+              <form id="subscribe-form" onsubmit="showPopup()">
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="fa fa-envelope"></i>
+                  </span>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control required"
+                    placeholder="Enter your Email"
+                  />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" type="submit">
+                      Subscribe
+                    </button>
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <div class="container" style="color: #fff;">
+            &copy; All Rights Reserved, Rocket Elevators <br />
+            Disclaimer: This website was developed for educational purpose only.
+            The content presented herein is fictional.
+          </div>
+        </div>
+      </footer>
+    </div>
 			<!-- /FOOTER -->
 
 		</div>

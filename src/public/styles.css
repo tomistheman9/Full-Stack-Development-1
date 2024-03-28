@@ -1,0 +1,17 @@
+/* Add your custom styles here */
+
+/* Set width for table */
+#data-table {
+  width: 100%;
+}
+
+/* Set minimum width for table cells */
+#data-table th,
+#data-table td {
+  min-width: 100px; /* Adjust as needed */
+}
+
+/* Set width for the dropdown cell */
+#sort-dropdown {
+  width: 150px; /* Adjust as needed */
+}

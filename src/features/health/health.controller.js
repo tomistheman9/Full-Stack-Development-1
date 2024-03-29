@@ -14,7 +14,7 @@ const status = async(req,res) => {
 };
 
 const error = async(req,res) => {
-  res.status(400);
+  // res.status(400);
   ResponseUtil.respondError(res,null, 'error')
 };
 

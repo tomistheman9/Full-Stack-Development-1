@@ -1,8 +1,13 @@
 const chai = require("chai");
 const sinon = require("sinon");
 require("dotenv").config();
-const HealthController = require("../src/features/health/health.controller");
-const ResponseUtil = require("../src/shared/utils/response-util").ResponseUtil;
+
+const envName = process.env.ENV_NAME;
+const port = process.env.PORT;
+
+const HealthController = require("../../../src/features/health/health.controller");
+const ResponseUtil = require("../../../src/shared/utils/response-util")
+  .ResponseUtil;
 
 describe("HealthController", () => {
   afterEach(() => {
@@ -32,14 +37,16 @@ describe("HealthController", () => {
       void HealthController.status();
     });
   });
-  // describe('#helloWorld()',()=>{
-  //   it('respond with Hello World',(done)=>{
-  //     sinon.stub(ResponseUtil,'respondOk').callsFake((res,data,message)=>{
-  //       chai.assert.equal(message,'Hello World');
-  //       done();
-  //     });
+  describe("#error()", () => {
+    it("respond with an error", (done) => {
+      sinon
+        .stub(ResponseUtil, "respondError")
+        .callsFake((res, data, message) => {
+          chai.assert.equal(message, "error");
+          done();
+        });
 
-  //     void HealthController.helloWorld();
-  //   });
-  // });
+      void HealthController.error();
+    });
+  });
 });

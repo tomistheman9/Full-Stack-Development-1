@@ -1,5 +1,6 @@
 const Data = require('../../shared/resources/data');
 
+
 const emailList = (req,res) => {
   const emails = Data.agents.map(agent=>agent.email);
   res.send(emails.toString());
